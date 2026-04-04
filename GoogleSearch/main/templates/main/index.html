@@ -1,0 +1,54 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Container -->
+<div class="container">
+
+    <!-- Logo -->
+    <img src="{% static 'main/images/google-logo.png' %}" class="logo">
+
+
+    <!-- Search -->
+    <form action="https://www.google.com/search" method="GET">
+
+        <!-- Search Box -->
+        <div class="search-container">
+
+            <!-- Icon -->
+            <span class="material-symbols-outlined search-icon">
+                search
+            </span>
+
+            <!-- Input -->
+            <input type="text" name="q" class="search-box" placeholder="">
+
+            <!-- Icons -->
+            <img src="{% static 'main/images/camera.png' %}" class="icon camera">
+            <img src="{% static 'main/images/mircophone.png' %}" class="icon mic">
+
+        </div>
+        <!-- End Search Box -->
+
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button type="submit" class="btn">Google Search</button>
+            <button type="button" class="btn">I'm Feeling Lucky</button>
+        </div>
+
+
+        <!-- Language -->
+        <p class="language">
+            Google offered in:
+            <a href="{% url 'main:home_ar' %}">العربية</a>
+        </p>
+
+    </form>
+    <!-- End Search -->
+
+</div>
+<!-- End Container -->
+
+{% endblock %}

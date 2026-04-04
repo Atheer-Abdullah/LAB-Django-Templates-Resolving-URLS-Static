@@ -1,0 +1,315 @@
+/* Global */
+
+body {
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 250px;
+}
+
+/* Search */
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px 0px 12px 40px;
+    border-radius: 25px;
+    border: 1px solid #dfe1e5;
+    outline: none;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9aa0a6;
+    font-size: 20px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    cursor: pointer;
+    right: 10px;
+    gap: 6px;
+}
+
+.mic {
+    right: 0px;
+}
+
+.camera {
+    right: 25px;
+}
+
+/* Header */
+
+header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.top-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.top-nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #202124;
+    font-size: 14px;
+}
+
+/* Layout */
+
+.container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+/* Buttons */
+
+.btn {
+    padding: 10px 16px;
+    margin: 5px;
+    border: 1px solid #f8f9fa;
+    background: #f8f9fa;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.btn:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #f2f2f2;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Footer Top */
+
+.footer-top {
+    padding: 10px 30px;
+    border-bottom: 1px solid #dadce0;
+    text-align: left;
+    color: #000;
+}
+
+/* Footer Bottom */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+/* Footer Links */
+
+.footer a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+.top-nav {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.top-nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #202124;
+    font-size: 14px;
+}
+
+.apps-icon {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #5f6368;
+}
+
+.sign-btn {
+    margin-left: 15px;
+    padding: 9px 25px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Language */
+
+.language {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #4d5156;
+}
+
+.language a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.language a:hover {
+    text-decoration: underline;
+}
+
+/* Terms */
+
+.terms-container {
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Terms Image */
+
+.terms-image {
+    width: 600px;
+    max-width: 100%;
+    display: block;
+    margin: 40px auto;
+}
+
+/* Terms Title */
+
+.terms-container h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #202124;
+}
+
+/* Meta */
+
+.meta {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 10px;
+}
+
+.meta a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+.meta a:hover {
+    text-decoration: underline;
+}
+
+/* Country */
+
+.country {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 20px;
+}
+
+.country span {
+    color: #202124;
+}
+
+/* Headings */
+
+.terms-container h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #202124;
+}
+
+/* Paragraphs */
+
+.terms-container p {
+    font-size: 14px;
+    color: #202124;
+}
+
+/* RTL Icons */
+
+html[dir="rtl"] .search-icon {
+    right: 15px;
+    left: auto;
+}
+
+/* Mic */
+
+html[dir="rtl"] .mic {
+    left: 0px;
+    right: auto;
+}
+
+/* Camera */
+
+html[dir="rtl"] .camera {
+    left: 25px;
+    right: auto;
+}
+
+/* RTL Header */
+
+html[dir="rtl"] .top-nav {
+    left: 10px;
+    right: auto;
+}
+
+/* RTL Country */
+
+html[dir="rtl"] .footer-top {
+    text-align: right;
+}

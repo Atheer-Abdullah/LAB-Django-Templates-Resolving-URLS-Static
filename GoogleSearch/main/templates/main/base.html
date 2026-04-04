@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <title>Google Clone</title>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-nav">
+
+    <a href="#">Gmail</a>
+
+{% if request.path|slice:":4" == '/ar/' %}
+    <a href="#">صور</a>
+{% else %}
+    <a href="#">Images</a>
+{% endif %}
+
+<span class="material-symbols-outlined apps-icon">
+    apps
+</span>
+
+{% if request.path|slice:":4" == '/ar/' %}
+    <button class="sign-btn">تسجيل الدخول</button>
+{% else %}
+    <button class="sign-btn">Sign in</button>
+{% endif %}
+
+</header>
+    <!-- End Header -->
+
+
+    <!-- Content -->
+    {% block content %}
+    {% endblock %}
+    <!-- End Content -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <!-- Country -->
+        <div class="footer-top">
+            {% if request.path|slice:":4" == '/ar/' %}
+                المملكة العربية السعودية
+            {% else %}
+                Saudi Arabia
+            {% endif %}
+        </div>
+
+        <div class="footer-bottom">
+
+            {% if request.path|slice:":4" == '/ar/' %}
+
+                <!-- Right -->
+                <div class="footer-right">
+                    <a href="#">لمحة</a>
+                    <a href="#">الإعلانات</a>
+                    <a href="#">الأعمال</a>
+                    <a href="#">آلية عمل "بحث Google"</a>
+                </div>
+
+                <!-- Left -->
+                <div class="footer-left">
+                    <a href="#">الخصوصية</a>
+                    <a href="{% url 'main:terms_ar' %}">البنود</a>
+                    <a href="#">الإعدادات</a>
+                </div>
+
+            {% else %}
+
+                <!-- Left -->
+                <div class="footer-left">
+                    <a href="#">Privacy</a>
+                    <a href="{% url 'main:terms' %}">Terms</a>
+                    <a href="#">Settings</a>
+                </div>
+
+                <!-- Right -->
+                <div class="footer-right">
+                    <a href="#">About</a>
+                    <a href="#">Advertising</a>
+                    <a href="#">Business</a>
+                    <a href="#">How Search works</a>
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>
